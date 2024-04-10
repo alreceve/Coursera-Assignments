@@ -172,7 +172,7 @@ def update_input_container(selected_statistics):
 
         avr_vdata=yearly_data.groupby('Year')['Automobile_Sales'].mean().reset_index()
 
-        Y_chart3 = dcc.Graph( figure=average_sales x='Year', y='Automobile_Sales',title='Average Vehicles Sold in the year {}'.format(input_year)))
+        Y_chart3 = dcc.Graph( figure=average_sales x='Year', y='Automobile_Sales',title='Average Vehicles Sold in the year {}'.format(input_year))
 
  
 
