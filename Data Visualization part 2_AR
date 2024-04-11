@@ -114,7 +114,7 @@ def update_output_container(selected_statistics, input_year):
                 y='Automobile_Sales',
                 color='Vehicle_Type',
                 title="Total Advertising Expenditure Share of Vehicle Type During Recession"
-            )
+                )
 ) 
     return [
             html.Div(className='chart-item', children=[html.Div(children=R_chart1),html.Div(children=R_chart2)],style={'display':'flex'}),
