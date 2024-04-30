@@ -1,4 +1,4 @@
-                 #!/usr/bin/env python
+#!/usr/bin/env python
 # coding: utf-8
 
 # In[ ]:
@@ -57,7 +57,14 @@ app.layout = html.Div([
 @app.callback(
     Output('input_year', 'disabled'),
     Input('dropdown-statistics','value'))
-def update_output_container(selected_statistics,input_year):
+
+def update_input_container(selected_statistics):
+    if 'dropdown-statistics' =='Yearly Statistics': 
+        return False
+    else: 
+        return True
+
+def update_output_container(selected_statistics, input_year):
     if selected_statistics == 'Recession Period Statistics':
         # Filter the data for recession periods
         recession_data = data[data['Recession'] == 1]
@@ -147,4 +154,4 @@ def update_output_container(selected_statistics,input_year):
 if __name__ == '__main__':
 
     app.run_server(debug=True)
-                                                                                                                                                                                                  
+                                                                                                                                                  
